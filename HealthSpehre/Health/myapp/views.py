@@ -15,7 +15,34 @@ load_dotenv()
 
 # Basic Page Views
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'main_index.html')
+
+def ai_assistant(request):
+        return render(request, 'ai_assistant.html')
+
+def calorie_finder(request):
+    return render(request, 'calorie_finder.html')
+
+def features(request):
+    return render(request, 'features.html')
+
+def daily_planner(request):
+    return render(request, 'daily_planner.html')
+
+def hydration_reminders(request):
+    return render(request, 'hydration_reminders.html')
+
+def community(request):
+    return render(request, 'community.html')
+
+def testimonial(request):
+    return render(request, 'testimonial.html')
+
+def error_404(request):
+    return render(request, '404.html')
+
+def features(request):
+    return render(request, 'features.html')
 
 def categories(request):
     return render(request, 'categories.html')
@@ -35,11 +62,23 @@ def category03(request):
 def category04(request):
     return render(request, 'category04.html')
 
+def tracking(request):
+    return render(request, 'tracking.html')
+
+def interactive(request):
+    return render(request, 'interactive.html')
+
 def articles_and_resources(request):
     return render(request, 'articles_and_resources.html')
 
+def contact(request):
+    return render(request, 'contact.html')
+
 def meditation(request):
     return render(request, 'meditation.html')
+
+def join(request):
+    return render(request, 'join.html')
 
 def sleep(request):
     return render(request, 'sleep.html')
@@ -125,8 +164,8 @@ def LogoutView(request):
     return redirect('login')
 
 # AI API Views
-def ai_index(request):
-    return render(request, 'index.html')
+# def ai_index(request):
+#     return render(request, 'index.html')
 
 @csrf_exempt
 def generate_response(request):
